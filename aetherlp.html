@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aether • Project Horizon</title>
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XMBK7X5XZY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-XMBK7X5XZY');
+</script>
+    <meta name="description" content="Aether — an evening ritual that transforms ordinary days into profound insight. Private, guided, and beautifully simple.">
+    <meta property="og:title" content="Aether • Project Horizon">
+    <meta property="og:description" content="An evening ritual that reveals what your days truly mean. Waitlist open.">
+    <meta property="og:image" content="https://i.imgur.com/YOUR_LOGO_LINK_HERE.png">
+    <meta property="og:url" content="https://project-horizon-lp.tiiny.site">
+    <meta name="twitter:card" content="summary_large_image">
+
+    <link rel="icon" href="aether-logo.png" type="image/png">
+    <link rel="apple-touch-icon" href="aether-logo.png">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200;300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg: #000000;
+            --primary: #14b8a6;
+            --secondary: #c084fc;
+            --text: #f1f5f9;
+        }
+
+        body {
+            background: var(--bg);
+            color: var(--text);
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            overflow-x: hidden;
+        }
+
+        /* Infinite zoom + breathing nebula — mind-blowing but non-distracting */
+        #cosmic-zoom {
+            position: fixed;
+            inset: 0;
+            z-index: -1;
+            pointer-events: none;
+            background: 
+                radial-gradient(circle at 20% 80%, rgba(20, 184, 166, 0.12) 0%, transparent 50%),
+                radial-gradient(circle at 80% 20%, rgba(192, 132, 252, 0.12) 0%, transparent 50%),
+                radial-gradient(circle at 50% 50%, rgba(20, 184, 166, 0.08) 0%, transparent 60%),
+                #000;
+            animation: zoom 80s linear infinite, breathe 20s ease-in-out infinite;
+        }
+
+        @keyframes zoom {
+            0% { transform: scale(1); }
+            100% { transform: scale(2.5); }
+        }
+
+        @keyframes breathe {
+            0%, 100% { opacity: 0.7; }
+            50% { opacity: 0.9; }
+        }
+
+        .hero-title {
+            font-weight: 700;
+            letter-spacing: -0.06em;
+            line-height: 0.86;
+            background: linear-gradient(135deg, #ffffff 0%, var(--secondary) 50%, var(--primary) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .serif {
+            font-family: 'Playfair Display', serif;
+        }
+
+        .badge {
+            background: rgba(255, 255, 255, 0.04);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            backdrop-filter: blur(20px);
+            box-shadow: 0 8px 32px rgba(0,0,0,0.5);
+        }
+
+        .form-container {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 28px;
+            box-shadow: 0 30px 80px rgba(0,0,0,0.7);
+            transition: all 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .form-container:focus-within {
+            border-color: var(--primary);
+            box-shadow: 0 40px 100px rgba(20, 184, 166, 0.25);
+            transform: translateY(-8px);
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, #ffffff, #f8fafc);
+            color: #000;
+            font-weight: 700;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            border-radius: 20px;
+            transition: all 0.5s ease;
+        }
+
+        .btn-primary:hover {
+            background: var(--primary);
+            box-shadow: 0 0 40px rgba(20, 184, 166, 0.6);
+            transform: scale(1.05);
+        }
+
+        .reveal {
+            opacity: 0;
+            transform: translateY(50px);
+            animation: revealUp 1.8s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+        }
+
+        @keyframes revealUp {
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .feature-card {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 24px;
+            backdrop-filter: blur(16px);
+            transition: all 0.6s ease;
+            padding: 2rem;
+        }
+
+        .feature-card:hover {
+            border-color: var(--primary);
+            box-shadow: 0 20px 50px rgba(20, 184, 166, 0.15);
+            transform: translateY(-10px);
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col">
+
+    <!-- Infinite zoom + breathing nebula — mind-blowing but non-distracting -->
+    <div id="cosmic-zoom"></div>
+
+    <main class="flex-grow flex flex-col items-center justify-center px-6 py-16 sm:py-24 relative z-10">
+        
+        <!-- Stealth Badge -->
+        <div class="mb-12 sm:mb-20 reveal" style="animation-delay: 0.2s;">
+            <div class="badge px-8 py-3 sm:px-10 sm:py-4 flex items-center gap-4 sm:gap-5 rounded-full">
+                <div class="relative flex h-3 w-3">
+                    <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-teal-400 opacity-75"></span>
+                    <span class="relative inline-flex rounded-full h-3 w-3 bg-teal-500"></span>
+                </div>
+                <span class="text-xs sm:text-sm font-bold tracking-widest text-zinc-300 uppercase">Stealth Mode: Active</span>
+            </div>
+        </div>
+
+        <!-- Hero -->
+        <div class="text-center mb-20 sm:mb-32 max-w-7xl reveal" style="animation-delay: 0.4s;">
+            <h1 class="hero-title text-6xl sm:text-8xl md:text-9xl lg:text-[11rem] xl:text-[12rem] mb-8 sm:mb-10">
+                AETHER
+            </h1>
+            <p class="text-zinc-400 text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl font-light tracking-tight max-w-4xl mx-auto px-4">
+                An evening ritual from <span class="serif text-zinc-200">Project Horizon</span> — 
+                where your day meets the deeper laws that shape it.
+            </p>
+        </div>
+
+        <!-- Feature Tease -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-10 sm:gap-12 mb-32 sm:mb-40 max-w-7xl w-full reveal" style="animation-delay: 0.8s;">
+            <div class="feature-card text-center">
+                <h3 class="text-2xl sm:text-3xl md:text-4xl font-light mb-4 sm:mb-6 text-white">Guided Flow</h3>
+                <p class="text-zinc-400 text-sm sm:text-base leading-relaxed">Intuitive prompts that unfold naturally each night</p>
+            </div>
+            <div class="feature-card text-center">
+                <h3 class="text-2xl sm:text-3xl md:text-4xl font-light mb-4 sm:mb-6 text-white">Profound Depth</h3>
+                <p class="text-zinc-400 text-sm sm:text-base leading-relaxed">Questions drawn from cosmic perspective and timeless insight</p>
+            </div>
+            <div class="feature-card text-center">
+                <h3 class="text-2xl sm:text-3xl md:text-4xl font-light mb-4 sm:mb-6 text-white">Evolving Constellation</h3>
+                <p class="text-zinc-400 text-sm sm:text-base leading-relaxed">Reflections that connect into a growing personal map over time</p>
+            </div>
+        </div>
+
+        <!-- Main Copy -->
+        <div class="text-center mb-24 sm:mb-32 max-w-5xl reveal" style="animation-delay: 1s;">
+            <h2 class="text-4xl sm:text-5xl md:text-6xl font-light leading-tight mb-8 sm:mb-10">
+                We don’t just record your days.<br>
+                <span class="serif text-teal-400">We reveal what they mean.</span>
+            </h2>
+            <p class="text-zinc-400 text-lg sm:text-xl leading-relaxed px-4">
+                Every night, cross the event horizon of reflection — a private, guided journey structured like nature and vast like the cosmos.
+            </p>
+        </div>
+
+        <!-- Social Proof Counter -->
+        <div class="text-center mb-10 sm:mb-12 reveal" style="animation-delay: 1.2s;">
+            <p class="text-zinc-300 text-lg sm:text-xl">
+                <span class="text-teal-400 font-medium">127+</span> early visionaries have claimed access
+            </p>
+        </div>
+
+        <!-- Form -->
+        <div class="text-center mb-10 sm:mb-12 reveal" style="animation-delay: 1.3s;">
+            <p class="text-zinc-200 text-xl sm:text-2xl font-light mb-8">
+                Limited early access — enter the waitlist
+            </p>
+        </div>
+        <div class="w-full max-w-xl sm:max-w-2xl lg:max-w-3xl reveal" style="animation-delay: 1.5s;">
+            <form action="https://formspree.io/f/xzdprrwj" method="POST" id="access-form" class="form-container flex flex-col sm:flex-row gap-3 sm:gap-4 p-4">
+                <input 
+                    type="email" 
+                    name="email"
+                    placeholder="Enter your email coordinates" 
+                    required
+                    class="bg-transparent flex-grow px-6 sm:px-10 py-5 sm:py-7 text-white placeholder-zinc-500 focus:outline-none text-lg sm:text-xl font-light"
+                >
+                <button type="submit" class="btn-primary px-10 sm:px-16 py-5 sm:py-7 text-base sm:text-lg">
+                    Request Access
+                </button>
+            </form>
+            <p class="mt-8 text-xs sm:text-sm tracking-widest text-zinc-600 uppercase text-center">Transmission Encrypted • Sequence 0x21</p>
+        </div>
+    </main>
+
+    <!-- Professional Footer -->
+    <footer class="py-16 sm:py-20 border-t border-white/[0.05]">
+        <div class="max-w-6xl mx-auto text-center px-4">
+            <div class="text-xs sm:text-sm tracking-widest text-zinc-700 font-mono uppercase mb-10">
+                LATENCY: <span id="latency">21</span>ms • T-MINUS: <span class="animate-pulse">UNKNOWN</span>
+            </div>
+            <div class="text-xs sm:text-sm text-zinc-600 space-x-6 sm:space-x-10">
+                <a href="#" class="hover:text-zinc-300 transition">Privacy Policy</a>
+                <a href="#" class="hover:text-zinc-300 transition">Terms of Service</a>
+                <a href="mailto:hello@projecthorizon.com" class="hover:text-zinc-300 transition">Contact</a>
+            </div>
+            <p class="text-xs sm:text-sm text-zinc-700 mt-8">© 2025 Project Horizon. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Toast -->
+    <div id="toast" class="fixed inset-0 flex items-center justify-center pointer-events-none z-50">
+        <div class="bg-teal-500 text-black px-16 sm:px-20 py-8 sm:py-10 rounded-3xl opacity-0 transition-opacity duration-500 font-bold tracking-widest uppercase text-lg sm:text-xl">
+            Coordinates Logged
+        </div>
+    </div>
+
+    <script>
+        // Form submission
+        document.getElementById('access-form').onsubmit = async (e) => {
+            e.preventDefault();
+            const form = e.target;
+            const data = new FormData(form);
+            const toast = document.querySelector('#toast > div');
+            try {
+                const response = await fetch(form.action, { method: 'POST', body: data, headers: { 'Accept': 'application/json' } });
+                if (response.ok) {
+                    toast.textContent = 'Coordinates Logged';
+                    toast.style.opacity = '1';
+                    form.reset();
+                    setTimeout(() => toast.style.opacity = '0', 3000);
+                } else throw new Error();
+            } catch {
+                toast.textContent = 'Transmission Failed';
+                toast.style.background = '#ef4444';
+                toast.style.opacity = '1';
+                setTimeout(() => { toast.style.opacity = '0'; toast.style.background = '#14b8a6'; }, 3000);
+            }
+        };
+
+        // Dynamic latency
+        setInterval(() => {
+            document.getElementById('latency').textContent = 19 + Math.floor(Math.random() * 4);
+        }, 4000);
+    </script>
+</body>
+</html>

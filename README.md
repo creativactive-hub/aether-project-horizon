@@ -1,2 +1,2 @@
 # aether-project-horizon
-Aether waitlist landing page
+Aether waitlist landing page 
